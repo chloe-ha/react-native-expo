@@ -1,25 +1,19 @@
-import { StyleSheet, SafeAreaView, View } from 'react-native';
-import { useDeviceOrientation } from '@react-native-community/hooks';
+import { StyleSheet, View } from 'react-native';
+import Welcome from './src/views/Welcome';
 
 export default function App() {
-  const { landscape } = useDeviceOrientation();
-
-  const containerBackground = { backgroundColor: 'orange' };
-
   return (
-    <SafeAreaView style={[styles.container, containerBackground]}>
-      <View style={[styles.orientationView, { height: landscape ? '100%' : '30%' }]} />
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Welcome />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-  orientationView: {
-    backgroundColor: 'dodgerblue',
     width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
