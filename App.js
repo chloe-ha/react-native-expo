@@ -1,10 +1,13 @@
 import { StyleSheet, View } from 'react-native';
-import Welcome from './src/views/Welcome';
+
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import GalleryScreen from './src/screens/GalleryScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Welcome />
+      {/* <WelcomeScreen /> */}
+      <GalleryScreen />
     </View>
   );
 }
